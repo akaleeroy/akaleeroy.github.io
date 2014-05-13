@@ -1,0 +1,386 @@
+/*@import url(http://weloveiconfonts.com/api/?family=fontawesome|zocial);*/
+@import url(icons.css);
+
+
+/*Boardgame Embiggen*/
+.boardgame {
+	position: relative;
+	left: -10%;
+	max-width: 120% !important;
+	width: 120%;
+}
+
+/*Phone app demo*/
+.under {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: 0 auto !important;
+	z-index:-1;
+}
+
+.over {
+	transform: scale(0.655) translate(0px, -18px);
+}
+
+
+.over.bent {
+	transform: perspective(110px) translateZ(2px) rotateY(-2deg) rotateZ(-.3deg) scale(0.49, 0.65) translate(-50px, -18px);
+}
+
+.sheen {
+	position: absolute;
+	pointer-events: none !important;
+	top: 118px;
+	left: 354px;
+	height: 420px;
+	width: 250px;
+	z-index: 1;
+	background: linear-gradient(-95deg, rgba(0,0,0,.3) 20%, rgba(200,200,255, .1) 50%, rgba(0,0,0,0) 52%) repeat;
+}
+
+/* Expanding Searchbox */
+.reveal #searchopener {
+	cursor: pointer;
+}
+
+.reveal #searchbox {
+	display: none;
+}
+
+.reveal input[type="search"] {
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	background: inherit;
+	border-bottom: 1px solid;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	margin: 0 8px 0 0px;
+	transition: all .2s ease;
+}
+
+.reveal input[type="search"]:focus {
+	/*border-bottom-color: #e7ad52; */ /* Theme dependent color! TODO: Find a way to make it variable */
+	/*outline: none;*/
+	outline: dashed thin;
+	outline-offset: 4px;
+}
+
+.reveal input[type="search"]::-webkit-search-cancel-button {   /* select all "X" buttons in search inputs */
+    -webkit-appearance: none;      /* hide the default "X" button */
+}
+
+.reveal input[type="search"]::-webkit-search-cancel-button:after {  /* generate content after all "X" buttons */
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: normal;
+    content: '\f057';    /* fontawesome-times-circle */
+    display: block;
+    margin: 0 1px; 
+}
+
+/*MFP remove styling*/
+.mfp-figure:after {
+	background: none !important;
+	box-shadow: none !important;
+}
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+  margin-right: .3em;
+}
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+  margin-right: .3em;
+}
+
+/* Reset the theme styles */
+.reveal {
+	font-size: 26px;
+}
+
+.reveal section img {
+    margin: initial;
+    background: none;
+    border: 0;
+    box-shadow: none;
+}
+
+.reveal a:hover img {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.77);
+	/*background: none;*/
+}
+
+.reveal a:hover img.round,
+.reveal a img.round {
+	border-radius: 50%;
+}
+
+/* Fix embedded video fullscreen */
+.reveal iframe {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/* Fix invisible clickable anchor tags in fragments */
+.reveal .slides section .fragment {
+	visibility: hidden;
+}
+
+.reveal .slides section .fragment.visible {
+	visibility: visible;
+}
+
+/* Fix h3 tag top and bottom */
+.reveal h3 {
+	padding: 20px 0 20px 0;
+}
+
+
+.reveal p {
+	margin: 0 0 .7em 0;
+}
+
+.reveal .icon {
+	padding: 4px;
+}
+
+.reveal .leftie {
+	text-align: left;
+}
+
+/* Navigation help */
+@media all and (min-height: 700px) {
+.reveal #help {
+	position: fixed;
+	font-size: 70%;
+
+	z-index: 30;
+	bottom: 60px;
+	left: 30px;
+	padding: 40px 30px;
+	margin: -50px -30px;
+
+	cursor: default;
+	line-height: 2; /* To make room for searchbox */
+	user-select: none;
+}
+}
+
+@media all and (max-height: 700px)  {
+.reveal #help {
+	position: fixed;
+	font-size: 70%;
+	z-index: 30;
+
+	bottom: 30px;
+	left: 25px;
+	padding: 20px;
+	margin: -20px;
+
+	cursor: default;
+	line-height: 2; /* To make room for searchbox */
+	user-select: none;
+}
+}
+
+/*.reveal #help {
+	position: fixed;
+	font-size: 70%;
+	z-index: 30;
+	top: 20px;
+	right: 20px;
+	padding: 20px;
+	margin: -20px;
+	cursor: default;
+	line-height: 2;
+	user-select: none;
+}*/
+
+.reveal #help.hidden {
+	opacity: 0;
+	transition: all .2s ease;
+}
+
+.reveal #help.hidden:hover {
+	opacity: 1;
+}
+
+/*.reveal #help a:first-child {
+	font-size: 160%;
+}*/
+
+/* White bubble module */
+.reveal .bubble {
+	background-color: rgba(255,255,255,.9);
+	border-radius: 50%;
+	margin: 0 0 .7em 0;
+}
+
+
+/* Post Scriptum */
+.postscriptum {
+	opacity: .3;
+}
+
+/* MFP Zoom-in cursor */
+.reveal a.gallery {
+	cursor: zoom-in;
+	outline: none; /* Fixes Firefox growing link outline */
+}
+
+/* Keyboard keys */
+kbd {
+	display: inline-block;
+	color: #aaa;
+	font-size: 14pt !important;
+	text-decoration: none;
+	text-align: center;
+	line-height: 2.7em !important;
+	vertical-align: middle;
+	width: 54px;
+	height: 2.7em;
+	margin: 5px !important;
+	background: #222;
+	border-radius: 6px;
+	border-top: 1px solid #222;
+	box-shadow: 
+		inset 0 0 25px #333,
+		0 1px 0 #000,
+		0 5px 0 #111,
+		0 5px 3px #333;
+	text-shadow: 0px -1px 0px #000;
+	user-select: none;
+	cursor: default;
+}
+
+kbd:hover {
+	position: relative;
+	top: 4px;
+	box-shadow: 
+		inset 0 0 25px #222,
+		0 -2px 0 #000,
+		0 1px 0 #111,
+		0 1px 3px #333;
+}
+
+kbd.space,
+kbd.backspace {
+	width: 140px;
+}
+
+kbd.pageup, 
+kbd.pagedown {
+	line-height: 1.3em !important;
+	vertical-align: middle;
+}
+
+/*small kbd {
+	display: inline-block;
+	color: #aaa;
+	font-size: .8em !important;
+	text-decoration: none;
+	text-align: center;
+	line-height: 2em !important;
+	height: 2.2em;
+	width: 2.2em;
+	margin: -0.35em .2em !important;
+	background: #222;
+	border-radius: .4em;
+	border-top: 1px solid #222;
+	box-shadow: 
+		inset 0 0 25px #333, 
+		0 1px 0 #000, 
+		0 .3em 0 #111, 
+		0 .3em 3px #333;
+	text-shadow: 0px -1px 0px #000;
+	user-select: none;
+	cursor: default;
+}
+
+small kbd:hover {
+	top: 2px;
+}
+
+kbd[class*="navigate-"] {
+	cursor: pointer;
+}*/
+
+/*---------------------------------
+Slick scrollbar (Webkit only)
+----------------------------------*/
+
+::-webkit-scrollbar, ::-webkit-scrollbar-corner { width: 15px; height: 15px; cursor: default !important; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 16px;
+  border: 5px solid transparent;
+  background-clip: content-box;
+  background-color: #bfbfbf;
+}
+
+::-webkit-scrollbar-thumb:hover { background-color: #A0A0A0; }
+
+/* CSS Flip */
+/* entire container, keeps perspective */
+@keyframes card {
+	0%, 100% {
+		transform: rotate(0deg) rotateX(0deg);
+	}
+	50% {
+		transform: rotate(-3deg) rotateX(3deg);
+	}
+}
+
+.flip-container {
+	perspective: 1200px;
+	animation: card 3s infinite ease-in-out;
+}
+
+ /* Pause the card animation */
+ .flip-container:hover {
+	animation-play-state: paused;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(-180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 960px;
+	height: 470px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 1.5s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
